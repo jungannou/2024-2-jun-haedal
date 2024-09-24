@@ -1,2 +1,3 @@
-a=['a','bcbc']
-print('a' in a)
+N=int(input())
+for i in range(N):
+    print('*'*(i+1))
