@@ -9,8 +9,8 @@ def detect_yesorno(s,t): # s와 t를 넣었을 때, 문제의 조건에 맞게 �
         # 여기서 len(s) 앞에 부등호가 붙은 이유는 len(s)는 1 index, 문자열 접근은 0 index여서 입니다!
         if s[s_idx]==t[t_idx]:
             s_idx+=1  #s_idx=0, t_idx=0일때 부터 탐색. s[0] in t의 경우, s_idx는 1 올라갑니다.
-        t_idx+=1 # 예를 들어, s[4]==t[7]의 경우, s_idx는 5로 올라가고, t_idx는 8로 올라갑니다. 그 이후엔, s[5], t[8]부터의 문자열만 탐색합니다.
-                 # s[0] not in t의 경우, s_idx=0, t_idx=len(t)-1 탐색 후,
+        t_idx+=1 # 예를 들어, s[4]==t[7]의 경우, s_idx는 5로, t_idx는 8로 올라갑니다. 그 이후엔, s[5], t[8]부터의 문자열만 탐색합니다.
+                 # s[0] not in t의 경우, s_idx=0, t_idx=len(t)-1 탐색 후,(s[0]==t[len(t)-1]인지 아닌지)
                  # s_idx는 0으로 남아있지만, t_idx==len(t)가 되므로, while 반복문을 나가게 됩니다.
 
     if s_idx==len(s):
